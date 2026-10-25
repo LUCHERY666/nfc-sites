@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Отзывы Театр Хворостовского</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Onest:wght@400;500;600&display=swap">
+<style>
+:root{
+  --stage:#12070d;
+  --velvet:#4a0f1f;
+  --ivory:#f6efe4;
+  --muted:#c9b8b0;
+  --crimson:#a3162f;
+  --crimson-dark:#7c0f23;
+  --gold:#d8b46a;
+  --gold-dark:#b28d45;
+  --display:"Playfair Display",Georgia,serif;
+  --body:"Onest","Segoe UI",system-ui,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{min-height:100%}
+body{
+  margin:0;min-height:100vh;color:var(--ivory);font-family:var(--body);
+  background-color:var(--stage);
+  background-image:radial-gradient(90% 60% at 50% -8%,var(--velvet) 0%,transparent 72%),radial-gradient(60% 40% at 50% 100%,#2a0a14 0%,transparent 70%);
+  background-attachment:fixed;
+  padding-block:32px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:flex;justify-content:center;align-items:center;
+}
+main{width:100%;max-width:400px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:26px;min-width:0}
+.masks{width:min(250px,70vw);height:auto;display:block;filter:drop-shadow(0 12px 24px rgba(0,0,0,.55))}
+h1{margin:0;font-family:var(--display);font-weight:500;font-size:clamp(1.35rem,6vw,1.65rem);line-height:1.25;letter-spacing:.01em;text-wrap:balance}
+.rule{width:56px;height:2px;border-radius:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);width:120px}
+nav{width:100%;display:flex;flex-direction:column;gap:12px}
+a.btn{
+  display:flex;align-items:center;justify-content:center;min-height:62px;padding:14px 20px;border-radius:999px;
+  text-decoration:none;font-size:1.1rem;font-weight:600;letter-spacing:.01em;transition:transform .1s ease,box-shadow .15s ease;
+}
+a.red{color:var(--ivory);background:linear-gradient(135deg,var(--crimson),var(--crimson-dark));box-shadow:0 8px 22px rgba(163,22,47,.45)}
+a.gold{color:#2a1306;background:linear-gradient(135deg,#e6c98a,var(--gold-dark));box-shadow:0 8px 22px rgba(216,180,106,.3)}
+a.btn:hover{transform:translateY(-1px)}
+a.btn:active{transform:scale(.98)}
+a.btn:focus-visible{outline:3px solid var(--ivory);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){a.btn{transition:none}}
+</style>
+</head>
+<body>
+<main>
+  <svg class="masks" viewBox="0 0 250 170" role="img" aria-label="Театральные маски">
+    <defs>
+      <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#dcd3c8"/></linearGradient>
+      <mask id="cutA" maskUnits="userSpaceOnUse" x="0" y="0" width="120" height="140">
+        <rect width="120" height="140" fill="#fff"/>
+        <path d="M24 58Q38 44 52 58Q38 68 24 58Z" fill="#000"/>
+        <path d="M68 58Q82 44 96 58Q82 68 68 58Z" fill="#000"/>
+      </mask>
+      <mask id="cutB" maskUnits="userSpaceOnUse" x="0" y="0" width="120" height="140">
+        <rect width="120" height="140" fill="#fff"/>
+        <path d="M24 62Q38 50 52 56Q38 72 24 62Z" fill="#000"/>
+        <path d="M68 56Q82 50 96 62Q82 72 68 56Z" fill="#000"/>
+      </mask>
+    </defs>
+    <g transform="translate(14 14) rotate(-9 60 70)">
+      <path mask="url(#cutA)" fill="url(#skin)" d="M60 6C94 6 114 30 114 64C114 102 92 134 60 134C28 134 6 102 6 64C6 30 26 6 60 6Z"/>
+      <g fill="none" stroke="#8d7f73" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 44Q38 32 54 42M66 42Q82 32 98 44"/>
+        <path d="M60 64L56 88Q60 92 64 88"/>
+        <path d="M32 98Q60 128 88 98Q60 110 32 98Z" fill="#8d7f73" fill-opacity=".25"/>
+        <path d="M16 84Q20 96 28 104M104 84Q100 96 92 104" stroke-opacity=".5"/>
+      </g>
+    </g>
+    <g transform="translate(112 24) rotate(8 60 70)">
+      <path mask="url(#cutB)" fill="url(#skin)" d="M60 6C94 6 114 30 114 64C114 102 92 134 60 134C28 134 6 102 6 64C6 30 26 6 60 6Z"/>
+      <g fill="none" stroke="#8d7f73" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 52L54 38M66 38L98 52"/>
+        <path d="M60 64L56 88Q60 92 64 88"/>
+        <path d="M34 118Q60 92 86 118Q60 106 34 118Z" fill="#8d7f73" fill-opacity=".25"/>
+        <path d="M18 80Q22 92 30 100M102 80Q98 92 90 100" stroke-opacity=".5"/>
+      </g>
+    </g>
+  </svg>
+  <h1>Театр оперы и балета<br>имени Д. А. Хворостовского</h1>
+  <div class="rule"></div>
+  <nav>
+    <a class="btn red" href="https://yandex.ru/maps/org/krasnoyarskiy_gosudarstvenny_teatr_opery_i_baleta_im_d_a_khvorostovskogo/1133707458/reviews/">Яндекс Карты</a>
+    <a class="btn gold" href="https://2gis.ru/krasnoyarsk/firm/985690699466037/tab/reviews">2ГИС</a>
+  </nav>
+</main>
+</body>
+</html>
