@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Отзывы Forever</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap">
+<style>
+/* центрированная колонка: иконка академической шапочки, заголовок, две крупные кнопки */
+:root{
+  --bg:#f6f7fb;
+  --fg:#12182b;
+  --muted:#667089;
+  --accent:#3b4bd8;
+  --accent-soft:#e6e9fb;
+  --btn:#12182b;
+  --btn-fg:#ffffff;
+  --btn-hover:#222b4a;
+  --body:"Onest","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0e1222;--fg:#f2f4fb;--muted:#9aa3bd;--accent:#8e9bff;--accent-soft:#1c2344;--btn:#f2f4fb;--btn-fg:#0e1222;--btn-hover:#d9deef;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0e1222;--fg:#f2f4fb;--muted:#9aa3bd;--accent:#8e9bff;--accent-soft:#1c2344;--btn:#f2f4fb;--btn-fg:#0e1222;--btn-hover:#d9deef;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  background:var(--bg);color:var(--fg);font-family:var(--body);
+  padding-block:32px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:flex;justify-content:center;align-items:center;
+}
+main{width:100%;max-width:400px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:32px;min-width:0}
+.cap{
+  width:84px;height:84px;border-radius:26px;background:var(--accent-soft);color:var(--accent);
+  display:flex;align-items:center;justify-content:center;
+}
+.cap svg{width:46px;height:46px}
+header{display:flex;flex-direction:column;gap:12px;align-items:center}
+.school{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:500}
+h1{margin:0;font-size:clamp(1.9rem,8vw,2.4rem);line-height:1.12;font-weight:700;letter-spacing:-.02em;text-wrap:balance}
+p.lead{margin:0;color:var(--muted);font-size:1.02rem;line-height:1.5;text-wrap:balance}
+nav{width:100%;display:flex;flex-direction:column;gap:12px}
+a.btn{
+  display:flex;align-items:center;justify-content:center;gap:10px;min-height:64px;padding:14px 20px;
+  background:var(--btn);color:var(--btn-fg);text-decoration:none;border-radius:18px;
+  font-size:1.15rem;font-weight:600;transition:background .15s ease,transform .1s ease;
+}
+a.btn:hover{background:var(--btn-hover)}
+a.btn:active{transform:scale(.98)}
+a.btn:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){a.btn{transition:none}}
+</style>
+</head>
+<body>
+<main>
+  <div class="cap" aria-hidden="true">
+    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M24 9 4 19l20 10 20-10L24 9Z"/>
+      <path d="M12 23.5V32c0 2.4 5.4 5 12 5s12-2.6 12-5v-8.5"/>
+      <path d="M44 19v11"/>
+    </svg>
+  </div>
+  <header>
+    <span class="school">Forever · ул. Весны, 17</span>
+    <h1>Расскажите, как вам у нас</h1>
+    <p class="lead">Выберите, где удобнее оставить отзыв. Это займёт минуту.</p>
+  </header>
+  <nav>
+    <a class="btn" href="https://yandex.ru/maps/org/forever/28984827870/reviews/">Яндекс Карты</a>
+    <a class="btn" href="https://2gis.ru/krasnoyarsk/firm/70000001031422432/tab/reviews">2ГИС</a>
+  </nav>
+</main>
+</body>
+</html>
