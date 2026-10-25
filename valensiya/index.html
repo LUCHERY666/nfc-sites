@@ -8,11 +8,10 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500;1,600&family=Onest:wght@400;500;600&display=swap">
 <style>
 :root{
-  --paper:#fff8f5;
-  --blush:#fde3e3;
+  --paper:#fffaf6;
+  --blush:#fbdcdc;
   --red:#c4122f;
   --red-dark:#8f0c22;
-  --leaf:#5b6b3f;
   --ink:#3a1a1f;
   --muted:#8c6b6f;
   --display:"Playfair Display",Georgia,serif;
@@ -24,18 +23,18 @@ html,body{min-height:100%}
 body{
   margin:0;min-height:100vh;color:var(--ink);font-family:var(--body);
   background-color:var(--paper);
-  background-image:radial-gradient(110% 60% at 50% 0%,var(--blush) 0%,transparent 70%);
+  background-image:radial-gradient(90% 55% at 50% 22%,var(--blush) 0%,transparent 72%);
   background-attachment:fixed;
-  padding-block:32px;
+  padding-block:28px;
   padding-left:max(16px,env(safe-area-inset-left,0px));
   padding-right:max(16px,env(safe-area-inset-right,0px));
   display:flex;justify-content:center;align-items:center;
 }
-main{width:100%;max-width:400px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:22px;min-width:0}
-.tulips{width:min(230px,64vw);height:auto;display:block}
-h1{margin:0;font-family:var(--display);font-style:italic;font-weight:600;font-size:clamp(2.4rem,11vw,3.1rem);line-height:1;color:var(--red-dark)}
-.sub{font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:500;margin-top:-10px}
-nav{width:100%;display:flex;flex-direction:column;gap:12px;margin-top:6px}
+main{width:100%;max-width:400px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px;min-width:0}
+.bouquet{width:min(330px,88vw);height:auto;display:block;filter:drop-shadow(0 14px 18px rgba(120,10,30,.22))}
+h1{margin:0;font-family:var(--display);font-style:italic;font-weight:600;font-size:clamp(2.5rem,12vw,3.2rem);line-height:1;color:var(--red-dark)}
+.sub{font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:500;margin-top:-6px}
+nav{width:100%;display:flex;flex-direction:column;gap:12px;margin-top:8px}
 a.btn{
   display:flex;align-items:center;justify-content:center;min-height:62px;padding:14px 20px;border-radius:999px;
   text-decoration:none;font-size:1.1rem;font-weight:600;letter-spacing:.01em;transition:transform .1s ease,box-shadow .15s ease;
@@ -50,23 +49,88 @@ a.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
 </head>
 <body>
 <main>
-  <svg class="tulips" viewBox="0 0 230 190" role="img" aria-label="Тюльпаны">
+  <svg class="bouquet" viewBox="0 0 330 300" role="img" aria-label="Букет красных роз">
     <defs>
-      <path id="bloom" d="M0 0C-17-4-19-30-9-46L-3-31L0-48L3-31L9-46C19-30 17-4 0 0Z"/>
+      <radialGradient id="pet" cx="50%" cy="100%" r="110%">
+        <stop offset="0" stop-color="#7a0a1e"/>
+        <stop offset=".45" stop-color="#b60f2c"/>
+        <stop offset=".85" stop-color="#e2384f"/>
+        <stop offset="1" stop-color="#f0657a"/>
+      </radialGradient>
+      <radialGradient id="pet2" cx="50%" cy="100%" r="110%">
+        <stop offset="0" stop-color="#8e0c24"/>
+        <stop offset=".5" stop-color="#c8183a"/>
+        <stop offset="1" stop-color="#f27a8c"/>
+      </radialGradient>
+      <radialGradient id="pet3" cx="50%" cy="100%" r="110%">
+        <stop offset="0" stop-color="#a50f2c"/>
+        <stop offset=".6" stop-color="#d8283f"/>
+        <stop offset="1" stop-color="#ff9aa8"/>
+      </radialGradient>
+      <linearGradient id="leaf" x1="0" y1="1" x2="1" y2="0">
+        <stop offset="0" stop-color="#2f4a22"/>
+        <stop offset="1" stop-color="#6f9a45"/>
+      </linearGradient>
+      <linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#e4405a"/>
+        <stop offset="1" stop-color="#8f0c22"/>
+      </linearGradient>
+      <path id="p1" d="M0 0C-34-8-52-42-26-62C-8-74 8-74 26-62C52-42 34-8 0 0Z"/>
+      <path id="p2" d="M0 0C-30-6-44-36-22-54C-6-64 6-64 22-54C44-36 30-6 0 0Z"/>
+      <path id="lf" d="M0 0C-16-18-18-46 0-76C18-46 16-18 0 0Z"/>
+      <g id="rose">
+        <g fill="url(#pet)" stroke="#6b0919" stroke-opacity=".45" stroke-width="1">
+          <use href="#p1" transform="rotate(0)"/>
+          <use href="#p1" transform="rotate(72)"/>
+          <use href="#p1" transform="rotate(144)"/>
+          <use href="#p1" transform="rotate(216)"/>
+          <use href="#p1" transform="rotate(288)"/>
+        </g>
+        <g fill="url(#pet2)" stroke="#6b0919" stroke-opacity=".5" stroke-width="1" transform="scale(.74) rotate(36)">
+          <use href="#p2" transform="rotate(0)"/>
+          <use href="#p2" transform="rotate(72)"/>
+          <use href="#p2" transform="rotate(144)"/>
+          <use href="#p2" transform="rotate(216)"/>
+          <use href="#p2" transform="rotate(288)"/>
+        </g>
+        <g fill="url(#pet3)" stroke="#6b0919" stroke-opacity=".5" stroke-width="1" transform="scale(.46) rotate(10)">
+          <use href="#p2" transform="rotate(0)"/>
+          <use href="#p2" transform="rotate(90)"/>
+          <use href="#p2" transform="rotate(180)"/>
+          <use href="#p2" transform="rotate(270)"/>
+        </g>
+        <g fill="none" stroke="#5e0716" stroke-opacity=".7" stroke-width="1.6" stroke-linecap="round">
+          <path d="M-7 -2C-7 -12 7 -12 7 -2C7 7 -3 8 -4 1"/>
+        </g>
+        <g fill="#fff" fill-opacity=".14">
+          <path d="M-30-46C-18-60 8-62 22-52C4-54-14-50-30-46Z"/>
+        </g>
+      </g>
     </defs>
-    <g stroke="#5b6b3f" stroke-width="3.2" stroke-linecap="round" fill="none">
-      <path d="M115 176C115 140 114 112 115 82"/>
-      <path d="M115 176C104 140 80 116 64 96"/>
-      <path d="M115 176C128 140 152 116 168 96"/>
+    <g stroke="#34501f" stroke-width="4" stroke-linecap="round" fill="none">
+      <path d="M165 262C165 220 166 190 165 150"/>
+      <path d="M165 262C150 220 112 196 92 164"/>
+      <path d="M165 262C180 220 218 196 238 164"/>
     </g>
-    <g fill="#5b6b3f">
-      <path d="M115 176C95 160 84 138 88 118C104 128 114 150 115 176Z"/>
-      <path d="M115 176C135 160 146 138 142 118C126 128 116 150 115 176Z"/>
+    <g fill="url(#leaf)" stroke="#2a4219" stroke-width="1" stroke-opacity=".6">
+      <use href="#lf" transform="translate(150 210) rotate(-62) scale(.9)"/>
+      <use href="#lf" transform="translate(182 214) rotate(60) scale(.9)"/>
+      <use href="#lf" transform="translate(100 146) rotate(-78) scale(.85)"/>
+      <use href="#lf" transform="translate(230 146) rotate(78) scale(.85)"/>
+      <use href="#lf" transform="translate(165 120) rotate(-30) scale(.8)"/>
+      <use href="#lf" transform="translate(165 120) rotate(34) scale(.8)"/>
     </g>
-    <g fill="#c4122f">
-      <use href="#bloom" transform="translate(115 86) scale(1.5)"/>
-      <use href="#bloom" transform="translate(63 100) rotate(-24) scale(1.35)" fill="#a50f27"/>
-      <use href="#bloom" transform="translate(169 100) rotate(24) scale(1.35)" fill="#d8223e"/>
+    <g stroke="#1f3314" stroke-opacity=".5" stroke-width="1" fill="none">
+      <path d="M150 210L109 184M182 214L224 188M100 146L40 128M230 146L290 128"/>
+    </g>
+    <use href="#rose" transform="translate(92 138) scale(.78) rotate(-14)"/>
+    <use href="#rose" transform="translate(238 138) scale(.78) rotate(18)"/>
+    <use href="#rose" transform="translate(165 98) scale(.98) rotate(4)"/>
+    <g>
+      <path d="M165 250C142 236 118 244 112 262C130 270 152 268 165 256Z" fill="url(#ribbon)"/>
+      <path d="M165 250C188 236 212 244 218 262C200 270 178 268 165 256Z" fill="url(#ribbon)"/>
+      <path d="M165 254L142 292M165 254L188 292" stroke="#8f0c22" stroke-width="9" stroke-linecap="round"/>
+      <rect x="153" y="246" width="24" height="18" rx="7" fill="#c4122f"/>
     </g>
   </svg>
   <h1>Валенсия</h1>
